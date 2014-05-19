@@ -9,10 +9,11 @@ def main():
     act = cont.actuators['trackTo']
     objList = sens.hitObjectList
     
-    if near.sensor.positive:
+    if sens.positive:
         target = objList[0]
         act.object = target
         cont.activate(act)
     else:
-        cont.desactivate(act)    
+        cont.deactivate(act)
+
 main()
